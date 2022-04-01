@@ -26,12 +26,14 @@
 
 
 <?php 
+    // variables to store the value from inputs
 $name = "";
 $quantity = "";
 $finalPrice = "";
 $ddsPercent = "";
 $singlePriceWithoutDds = "";
 
+// gets the values from all inputs
 if(isset($_GET['submit'])){
 if (isset($_GET['name'])) {
     $name = $_GET['name'];
@@ -50,7 +52,7 @@ if (isset($_GET['ddsPercent'])) {
 
 
 ?>
-
+ // table where calculations get printed
 <h3>Изчусляване на единична цена на стока без ДДС</h3>
 <table>
 <tr >
@@ -78,6 +80,7 @@ if (isset($_GET['ddsPercent'])) {
 
 </table>
 <br>
+    // additional button to clear(reset) the table with outputs
 <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
 <input type="submit" name="reset" value="Изчисти таблицата">
 </form>
